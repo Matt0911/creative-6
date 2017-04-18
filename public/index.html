@@ -105,6 +105,7 @@
         document.getElementById('quickstart-sign-in').textContent = 'Sign out';
         $('#name').text(user.uid);
         $('#status').text('Welcome');
+        loadFromDB();
         // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
         // [END_EXCLUDE]
       } else {
@@ -114,6 +115,7 @@
         document.getElementById('quickstart-sign-in').textContent = 'Sign in with GitHub';
         $('#name').text('');
         $('#status').text('Please Sign In');
+        clearAll();
         // document.getElementById('quickstart-account-details').textContent = 'null';
         // document.getElementById('quickstart-oauthtoken').textContent = 'null';
         // [END_EXCLUDE]

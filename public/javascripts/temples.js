@@ -40,6 +40,36 @@ $(document).ready(function(){
     }
   });
 
+  function clearAll() {
+    for (var i = 0, len = ids.length; i < len; i++) {
+      $('#'+ids[i]).prop('checked', false);
+    }
+  }
+
+  function loadFromDB() {
+    if ($("#name").text() != '') {
+      $.getJSON('temples/' + $("#name").text(), function(data) {
+        console.log(data);
+        if (data === null) {
+          for (var i = 0, len = ids.length; i < len; i++) {
+            $('#'+ids[i]).prop('checked', false);
+          }
+        }
+        else {
+          for (temple in data.Temples) {
+            if (data.Temples[temple]) {
+              $('#'+ temple).prop('checked', true);
+            }
+            else {
+              $('#'+ temple).prop('checked', false);
+            }
+          }
+        }
+        checkSelected();
+      });
+    }
+  }
+
   $("#load").click(function() {
     if ($("#name").text() != '') {
       $.getJSON('temples/' + $("#name").text(), function(data) {
