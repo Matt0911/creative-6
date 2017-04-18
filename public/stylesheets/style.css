@@ -136,3 +136,14 @@ input {
 #vernal-map {
   background-image: url("../vernal.png");
 }
+
+#saveNote {
+  color: #ddd;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 4px;
+  width: 300px;
+  padding: 20px;
+  position: absolute;
+  top: 100px;
+  left: 150px;
+}
