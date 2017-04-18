@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  // $("#name").hidden();
+
   var ids = [
     'bountiful',
     'brighamCity',
@@ -19,8 +21,8 @@ $(document).ready(function(){
   ]
 
   $("#save").click(function(){
-    if ($("#name").val() != '') {
-      var myobj = {Name:$("#name").val(),Temples:{}};
+    if ($("#name").text() != '') {
+      var myobj = {Name:$("#name").text(),Temples:{}};
       for (var i = 0, len = ids.length; i < len; i++) {
         myobj.Temples[ids[i]] = $('#'+ids[i]).prop('checked');
       }
@@ -39,8 +41,8 @@ $(document).ready(function(){
   });
 
   $("#load").click(function() {
-    if ($("#name").val() != '') {
-      $.getJSON('temples/' + $("#name").val(), function(data) {
+    if ($("#name").text() != '') {
+      $.getJSON('temples/' + $("#name").text(), function(data) {
         console.log(data);
         if (data === null) {
           for (var i = 0, len = ids.length; i < len; i++) {
