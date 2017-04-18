@@ -153,6 +153,7 @@
         document.getElementById('quickstart-sign-in').textContent = 'Sign out';
         $('#name').text(user.uid);
         $('#status').text('Welcome');
+        $('#save').show();
         loadFromDB();
         // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
         // [END_EXCLUDE]
@@ -163,6 +164,7 @@
         document.getElementById('quickstart-sign-in').textContent = 'Sign in with GitHub';
         $('#name').text('');
         $('#status').text('Please Sign In');
+        $('#save').hide();
         clearAll();
         // document.getElementById('quickstart-account-details').textContent = 'null';
         // document.getElementById('quickstart-oauthtoken').textContent = 'null';
