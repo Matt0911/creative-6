@@ -6,6 +6,8 @@
 <script src="javascripts/mapStuff.js"></script>
 <script src="javascripts/temples.js"></script>
 <link rel="stylesheet" href="stylesheets/style.css">
+
+<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -132,7 +134,7 @@
   <!-- Button that handles sign-in/sign-out -->
   <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with GitHub</button>
   Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
-  
+
   <div id="temple-list">
     <form>
       <label for="name">Name: </label><input type="text" id="name" placeholder="Name"><br>
