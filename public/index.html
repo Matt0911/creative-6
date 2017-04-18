@@ -104,6 +104,7 @@
         document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
         document.getElementById('quickstart-sign-in').textContent = 'Sign out';
         $('#name').text(user.uid);
+        $('#status').text('Welcome');
         // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
         // [END_EXCLUDE]
       } else {
@@ -111,6 +112,8 @@
         // [START_EXCLUDE]
         document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
         document.getElementById('quickstart-sign-in').textContent = 'Sign in with GitHub';
+        $('#name').text('');
+        $('#status').text('Please Sign In');
         // document.getElementById('quickstart-account-details').textContent = 'null';
         // document.getElementById('quickstart-oauthtoken').textContent = 'null';
         // [END_EXCLUDE]
@@ -130,8 +133,9 @@
 </head>
 
 <body>
+  <h1 id='status'>Please Sign In</h1>
   <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with GitHub</button>
-  Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+  <span id="quickstart-sign-in-status">Unknown</span>
   <span id='name'>HI</span>
 <div id="main-container">
   <!-- Button that handles sign-in/sign-out -->
