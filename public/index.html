@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Temples Visit Log</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="javascripts/mapStuff.js"></script>
+<script src="javascripts/temples.js"></script>
+<link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body>
+
+<div id="main-container">
+  <div id="temple-list">
+    <form>
+      <label for="name">Name: </label><input type="text" id="name" placeholder="Name"><br>
+      <div>
+        <button type='button' id="load">Load</button>
+        <button type='button' id="save">Save</button>
+      </div>
+      <input type="checkbox" name="temple" id="bountiful">Bountiful Utah<br>
+      <input type="checkbox" name="temple" id="brighamCity">Brigham City Utah<br>
+      <input type="checkbox" name="temple" id="draper">Draper Utah<br>
+      <input type="checkbox" name="temple" id="jordanRiver">Jordan River Utah<br>
+      <input type="checkbox" name="temple" id="logan">Logan Utah<br>
+      <input type="checkbox" name="temple" id="manti">Manti Utah<br>
+      <input type="checkbox" name="temple" id="monticello">Monticello Utah<br>
+      <input type="checkbox" name="temple" id="mountTimpanogos">Mount Timpanogos Utah<br>
+      <input type="checkbox" name="temple" id="ogden">Ogden Utah<br>
+      <input type="checkbox" name="temple" id="oquirrhMountain">Oquirrh Mountain Utah<br>
+      <input type="checkbox" name="temple" id="payson">Payson Utah<br>
+      <input type="checkbox" name="temple" id="provoCityCenter">Provo City Center<br>
+      <input type="checkbox" name="temple" id="provo">Provo Utah<br>
+      <input type="checkbox" name="temple" id="stGeorge">St. George Utah<br>
+      <input type="checkbox" name="temple" id="saltLake">Salt Lake Utah<br>
+      <input type="checkbox" name="temple" id="vernal">Vernal Utah
+    </form>
+  </div>
+  <div id="map">
+    <div id="bottom-layer-map"></div>
+    <div id="bountiful-map"></div>
+    <div id="brighamCity-map"></div>
+    <div id="draper-map"></div>
+    <div id="jordanRiver-map"></div>
+    <div id="logan-map"></div>
+    <div id="manti-map"></div>
+    <div id="monticello-map"></div>
+    <div id="mountTimpanogos-map"></div>
+    <div id="ogden-map"></div>
+    <div id="oquirrhMountain-map"></div>
+    <div id="payson-map"></div>
+    <div id="provoCityCenter-map"></div>
+    <div id="provo-map"></div>
+    <div id="stGeorge-map"></div>
+    <div id="saltLake-map"></div>
+    <div id="vernal-map"></div>
+  </div>
+</div>
+
+</body>
+</html>
