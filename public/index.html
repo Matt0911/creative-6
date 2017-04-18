@@ -152,8 +152,7 @@
         document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
         document.getElementById('quickstart-sign-in').textContent = 'Sign out';
         $('#name').text(user.uid);
-        $('#displayName').text(user.displayName);
-        $('#status').text('Welcome');
+        $('#status').text('Welcome, ' + displayName);
         $('#save').show();
         loadFromDB();
         // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
@@ -164,7 +163,6 @@
         document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
         document.getElementById('quickstart-sign-in').textContent = 'Sign in with GitHub';
         $('#name').text('');
-        $('#displayName').text('');
         $('#status').text('Please Sign In');
         $('#save').hide();
         clearAll();
@@ -187,7 +185,7 @@
 </head>
 
 <body>
-  <h1 id='status'>Please Sign In<span id="displayName"></span></h1>
+  <h1 id='status'>Please Sign In</h1>
   <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with GitHub</button>
   <span id="quickstart-sign-in-status">Unknown</span>
   <span id='name'></span>
