@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  // $("#name").hidden();
+  $("#name").hidden();
+  $("#quickstart-sign-in-status").hidden();
 
   var ids = [
     'bountiful',
