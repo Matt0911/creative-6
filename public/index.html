@@ -152,7 +152,11 @@
         document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
         document.getElementById('quickstart-sign-in').textContent = 'Sign out';
         $('#name').text(user.uid);
-        $('#status').text('Welcome, ' + displayName);
+        if (displayName == "null" || displayName == null) {
+          $('#status').text('Welcome, ' + email);
+        } else {
+          $('#status').text('Welcome, ' + displayName);
+        }
         $('#save').show();
         loadFromDB();
         // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
