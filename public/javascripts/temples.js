@@ -38,6 +38,11 @@ $(document).ready(function(){
         type: "POST",
         data: jobj,
         contentType: "application/json; charset=utf-8",
+      }).done(function() {
+          alert( "Saved!" );
+      })
+        .fail(function() {
+          alert( "There was an error. Please try again." );
       });
     }
   });
